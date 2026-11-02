@@ -1,4 +1,4 @@
-# latency_controlled_comparison_159216e8
+# long_context_price_jump_ab_comparison
 
 （长上下文的单价跃升场景）为长上下文的单价跃升选哪个基线才不会被误导？用延迟与分位统计比较至少两个基线在同一输入上的差异。
 
@@ -15,9 +15,9 @@
 仅依赖 Python 标准库。
 
 ```bash
-python latency_controlled_comparison_159216e8.py --help
-python latency_controlled_comparison_159216e8.py --input sample.txt
-python latency_controlled_comparison_159216e8.py --input sample.txt --json
+python long_context_price_jump_ab_comparison.py --help
+python long_context_price_jump_ab_comparison.py --input sample.txt
+python long_context_price_jump_ab_comparison.py --input sample.txt --json
 ```
 
 输入文件按行解析。协议「对照实验」使用分隔符 `（无）` 区分标签与载荷。
@@ -50,7 +50,7 @@ p95 超过基线 1.5 倍即判定为退化。
 ## 复现步骤
 
 1. 按上面的分隔符准备输入文件，每行一条样本；
-2. 运行 `python latency_controlled_comparison_159216e8.py --input sample.txt --json`；
+2. 运行 `python long_context_price_jump_ab_comparison.py --input sample.txt --json`；
 3. 记录运行环境、输入文件与完整输出；
 4. **未运行的指标不要引用**：本仓库只提供测量方法与判定规则，
    不预填任何实测数字。填入实测值前请确认对应命令与输入一致。
